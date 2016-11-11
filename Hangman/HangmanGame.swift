@@ -15,13 +15,14 @@ class HangmanGame {
     
     func guessLetter(letter: Character) {
         guessedWord = ""
+        
+        if !word.contains(String(letter)) && !guessedLetters.contains(letter){
+            tries -= 1
+        }
+
         guessedLetters.insert(letter)
         for char in word.characters {
             guessedWord = guessedWord + (guessedLetters.contains(char) ? String(char) : "?")
-        }
-        
-        if !word.contains(String(letter)) {
-            tries -= 1
         }
     }
 }
