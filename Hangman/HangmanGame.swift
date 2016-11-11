@@ -6,6 +6,14 @@ class HangmanGame {
     var guessedWord: String
     var guessedLetters: Set<Character>
     
+    var isWon: Bool {
+        return guessedWord == word
+    }
+    
+    var isOver: Bool {
+        return isWon || tries == 0
+    }
+    
     init(word: String, tries: Int) {
         self.word = word
         self.tries = tries
