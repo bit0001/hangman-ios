@@ -22,6 +22,10 @@ class HangmanGame {
     }
     
     func guessLetter(letter: Character) {
+        guard !isOver else {
+            return
+        }
+        
         guessedWord = ""
         
         if !word.contains(String(letter)) && !guessedLetters.contains(letter){
