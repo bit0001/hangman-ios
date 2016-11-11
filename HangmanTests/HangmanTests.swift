@@ -10,8 +10,10 @@ import XCTest
 @testable import Hangman
 
 class HangmanTests: XCTestCase {
+    var game: HangmanGame!
     
     override func setUp() {
+        game = HangmanGame(word: "him", tries: 3)
         super.setUp()
     }
     
@@ -20,27 +22,27 @@ class HangmanTests: XCTestCase {
     }
     
     func testMaskedWordGuessedLettersAndTriesAreUpdatedProperlyCase0() {
-        let game = HangmanGame(word: "hello", tries: 7)
         var set = Set<Character>()
-        var letter: Character = "h"
+        let letter: Character = "h"
         set.insert(letter)
         
         game.guessLetter(letter: letter)
-        XCTAssertEqual(game.guessedWord, "h????")
-        XCTAssertEqual(game.guessedLetters, set)
-        XCTAssertEqual(game.tries, 7)
+        assertGame(game: game, expectedString: "h??", expectedSet: set, expectedTries: 3)
     }
     
     func testMaskedWordAndGuessedLettersAreUpdatedProperlyCase1() {
-        let game = HangmanGame(word: "computer", tries: 7)
         var set = Set<Character>()
         let letter: Character = "x"
         set.insert(letter)
         
         game.guessLetter(letter: letter)
-        XCTAssertEqual(game.guessedWord, "????????")
-        XCTAssertEqual(game.guessedLetters, set)
-        XCTAssertEqual(game.tries, 6)
+        assertGame(game: game, expectedString: "???", expectedSet: set, expectedTries: 2)
+    }
+    
+    private func assertGame(game: HangmanGame, expectedString: String, expectedSet: Set<Character>, expectedTries: Int) {
+        XCTAssertEqual(game.guessedWord, expectedString)
+        XCTAssertEqual(game.guessedLetters, expectedSet)
+        XCTAssertEqual(game.tries, expectedTries)
     }
     
 }
