@@ -81,26 +81,21 @@ class HangmanTests: XCTestCase {
         set.insert(letter)
         game.guessLetter(letter: letter)
         assertGame(game: game, expectedString: "h?m", expectedSet: set, expectedTries: 2)
-        
+
         letter = "x"
         set.insert(letter)
         game.guessLetter(letter: letter)
         assertGame(game: game, expectedString: "h?m", expectedSet: set, expectedTries: 2)
-        
+
         letter = "y"
         set.insert(letter)
         game.guessLetter(letter: letter)
         assertGame(game: game, expectedString: "h?m", expectedSet: set, expectedTries: 1)
-        
-        letter = "z"
-        set.insert(letter)
-        game.guessLetter(letter: letter)
-        assertGame(game: game, expectedString: "h?m", expectedSet: set, expectedTries: 0)
-        
+
         letter = "i"
         set.insert(letter)
         game.guessLetter(letter: letter)
-        assertGame(game: game, expectedString: "him", expectedSet: set, expectedTries: 0)
+        assertGame(game: game, expectedString: "him", expectedSet: set, expectedTries: 1)
     }
     
     func testLosingCase0() {
