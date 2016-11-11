@@ -1,8 +1,8 @@
 import Foundation
 
 class HangmanGame {
-    let word: String
-    let tries: Int
+    private let word: String
+    var tries: Int
     var guessedWord: String
     var guessedLetters: Set<Character>
     
@@ -13,4 +13,15 @@ class HangmanGame {
         guessedLetters = Set<Character>()
     }
     
+    func guessLetter(letter: Character) {
+        guessedWord = ""
+        guessedLetters.insert(letter)
+        for char in word.characters {
+            guessedWord = guessedWord + (guessedLetters.contains(char) ? String(char) : "?")
+        }
+        
+        if !word.contains(String(letter)) {
+            tries -= 1
+        }
+    }
 }
