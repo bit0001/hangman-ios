@@ -14,6 +14,7 @@
 		CE8546381DD55FEA00992713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8546361DD55FEA00992713 /* LaunchScreen.storyboard */; };
 		CE8546431DD55FEA00992713 /* HangmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8546421DD55FEA00992713 /* HangmanTests.swift */; };
 		CE85464E1DD55FEA00992713 /* HangmanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85464D1DD55FEA00992713 /* HangmanUITests.swift */; };
+		CEDF052C1DD654B000E133B7 /* HangmanGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF052B1DD654B000E133B7 /* HangmanGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CE8546491DD55FEA00992713 /* HangmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE85464D1DD55FEA00992713 /* HangmanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanUITests.swift; sourceTree = "<group>"; };
 		CE85464F1DD55FEA00992713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDF052B1DD654B000E133B7 /* HangmanGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				CE85462F1DD55FEA00992713 /* ViewController.swift */,
 				CE8546311DD55FEA00992713 /* Main.storyboard */,
 				CE8546341DD55FEA00992713 /* Assets.xcassets */,
+				CEDF052D1DD654BA00E133B7 /* Model */,
 				CE85465B1DD5790400992713 /* Supporting Files */,
 			);
 			path = Hangman;
@@ -131,6 +134,14 @@
 				CE8546391DD55FEA00992713 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEDF052D1DD654BA00E133B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF052B1DD654B000E133B7 /* HangmanGame.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8546301DD55FEA00992713 /* ViewController.swift in Sources */,
+				CEDF052C1DD654B000E133B7 /* HangmanGame.swift in Sources */,
 				CE85462E1DD55FEA00992713 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +523,7 @@
 				CE8546541DD55FEA00992713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE8546551DD55FEA00992713 /* Build configuration list for PBXNativeTarget "HangmanTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +532,7 @@
 				CE8546571DD55FEA00992713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE8546581DD55FEA00992713 /* Build configuration list for PBXNativeTarget "HangmanUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +541,7 @@
 				CE85465A1DD55FEA00992713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
