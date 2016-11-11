@@ -151,6 +151,17 @@ class HangmanTests: XCTestCase {
         assertGame(game: game, expectedString: "hi?", expectedSet: set, expectedTries: 0)
     }
     
+    func testTriesAreNotReducedIfGuessedLetterHasPreviouslyGuessed() {
+        var set = Set<Character>()
+        let letter: Character = "x"
+        set.insert(letter)
+        
+        game.guessLetter(letter: letter)
+        assertGame(game: game, expectedString: "???", expectedSet: set, expectedTries: 2)
+        game.guessLetter(letter: letter)
+        assertGame(game: game, expectedString: "???", expectedSet: set, expectedTries: 2)
+    }
+    
     private func assertGame(game: HangmanGame, expectedString: String, expectedSet: Set<Character>, expectedTries: Int) {
         XCTAssertEqual(game.guessedWord, expectedString)
         XCTAssertEqual(game.guessedLetters, expectedSet)
