@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var hangmanImage: UIImageView!
+    @IBOutlet weak var wordLabel: UILabel!
+    @IBOutlet weak var guessTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func guess() {
+    }
+    
+    @IBAction func newWord() {
+    }    
 
 }
 

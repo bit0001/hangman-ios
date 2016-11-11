@@ -47,7 +47,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I20-8B-ZCV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="I20-8B-ZCV">
                                                 <rect key="frame" x="0.0" y="17" width="139" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
@@ -75,6 +75,9 @@
                                                 <state key="normal" title=" GUESS ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="guess" destination="BYZ-38-t0r" eventType="touchUpInside" id="rjI-KH-CH4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpn-xl-5zZ">
                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="30"/>
@@ -82,6 +85,9 @@
                                                 <state key="normal" title=" NEW ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="newWord" destination="BYZ-38-t0r" eventType="touchUpInside" id="XG4-4D-9ZP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -100,6 +106,11 @@
                             <constraint firstItem="zKH-gQ-6ts" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="teW-Jd-5QG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guessTextField" destination="bXV-nt-dNa" id="tMn-CB-umF"/>
+                        <outlet property="hangmanImage" destination="GrS-kd-lx2" id="zgY-c2-lQ9"/>
+                        <outlet property="wordLabel" destination="I20-8B-ZCV" id="54E-93-uOY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
