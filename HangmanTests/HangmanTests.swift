@@ -162,6 +162,38 @@ class HangmanTests: XCTestCase {
         assertGame(game: game, expectedString: "???", expectedSet: set, expectedTries: 2)
     }
     
+    func testGameIsWonWhenWordWasGuessed() {
+        game = HangmanGame(word: "me", tries: 2)
+        game.guessLetter(letter: "m")
+        game.guessLetter(letter: "e")
+        XCTAssertTrue(game.isWon)
+    }
+    
+    func testGameIsNotWonWhenWordHasntBeenGuessedYet() {
+        game = HangmanGame(word: "me", tries: 2)
+        game.guessLetter(letter: "e")
+        XCTAssertFalse(game.isWon)
+    }
+    
+    func testGameIsOverIfWordWasGuessed() {
+        game = HangmanGame(word: "me", tries: 2)
+        game.guessLetter(letter: "m")
+        game.guessLetter(letter: "e")
+        XCTAssertTrue(game.isOver)
+    }
+    
+    func testGAmeIsOverIfNoMoreTries() {
+        game = HangmanGame(word: "me", tries: 1)
+        game.guessLetter(letter: "u")
+        XCTAssertTrue(game.isOver)
+    }
+    
+    func testGameIsNotOverIfTriesIsNotZeroAndWordIsNotGuessedYet() {
+        game = HangmanGame(word: "me", tries: 2)
+        game.guessLetter(letter: "u")
+        XCTAssertFalse(game.isOver)
+    }
+    
     private func assertGame(game: HangmanGame, expectedString: String, expectedSet: Set<Character>, expectedTries: Int) {
         XCTAssertEqual(game.guessedWord, expectedString)
         XCTAssertEqual(game.guessedLetters, expectedSet)
