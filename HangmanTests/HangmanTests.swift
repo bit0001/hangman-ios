@@ -194,6 +194,13 @@ class HangmanTests: XCTestCase {
         XCTAssertFalse(game.isOver)
     }
     
+    func testTriesAreNotReducedIfNoMoreTries() {
+        game = HangmanGame(word: "me", tries: 1)
+        game.guessLetter(letter: "u")
+        game.guessLetter(letter: "p")
+        XCTAssertEqual(game.tries, 0)
+    }
+
     private func assertGame(game: HangmanGame, expectedString: String, expectedSet: Set<Character>, expectedTries: Int) {
         XCTAssertEqual(game.guessedWord, expectedString)
         XCTAssertEqual(game.guessedLetters, expectedSet)
