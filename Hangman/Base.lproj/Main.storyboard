@@ -93,21 +93,41 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have guessed:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="t6h-9T-0xg">
+                                <rect key="frame" x="16" y="296" width="288" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(10 guesses left)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNz-Ie-dUI">
+                                <rect key="frame" x="16" y="329" width="288" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="KKL-gS-lK2" secondAttribute="trailing" id="2Wd-Ce-a4I"/>
                             <constraint firstItem="zKH-gQ-6ts" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6zy-e4-ttT"/>
+                            <constraint firstItem="t6h-9T-0xg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ERp-Ga-489"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wT1-Yn-6DC" secondAttribute="trailing" id="EzI-DT-Zlt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t6h-9T-0xg" secondAttribute="trailing" id="Lbm-iU-bDz"/>
                             <constraint firstItem="KKL-gS-lK2" firstAttribute="top" secondItem="wT1-Yn-6DC" secondAttribute="bottom" constant="33" id="NY3-t9-PTc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eNz-Ie-dUI" secondAttribute="trailing" id="Nav-5r-o3y"/>
                             <constraint firstItem="wT1-Yn-6DC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ya0-mz-cI6"/>
+                            <constraint firstItem="eNz-Ie-dUI" firstAttribute="top" secondItem="t6h-9T-0xg" secondAttribute="bottom" constant="15" id="c1T-tM-gel"/>
                             <constraint firstItem="wT1-Yn-6DC" firstAttribute="top" secondItem="zKH-gQ-6ts" secondAttribute="bottom" constant="32.5" id="cip-vN-Aa2"/>
+                            <constraint firstItem="t6h-9T-0xg" firstAttribute="top" secondItem="KKL-gS-lK2" secondAttribute="bottom" constant="15" id="dDd-55-bxd"/>
+                            <constraint firstItem="eNz-Ie-dUI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kQy-19-d5b"/>
                             <constraint firstItem="KKL-gS-lK2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pCG-N4-R3h"/>
                             <constraint firstItem="zKH-gQ-6ts" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="teW-Jd-5QG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="guessTextField" destination="bXV-nt-dNa" id="tMn-CB-umF"/>
+                        <outlet property="guessedLettersLabel" destination="t6h-9T-0xg" id="JV1-oT-xza"/>
+                        <outlet property="guessesLeftLabel" destination="eNz-Ie-dUI" id="Fh8-3g-s2W"/>
                         <outlet property="hangmanImage" destination="GrS-kd-lx2" id="zgY-c2-lQ9"/>
                         <outlet property="wordLabel" destination="I20-8B-ZCV" id="54E-93-uOY"/>
                     </connections>
