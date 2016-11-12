@@ -32,7 +32,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wT1-Yn-6DC">
                                 <rect key="frame" x="16" y="79" width="288" height="139"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GrS-kd-lx2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman0" translatesAutoresizingMaskIntoConstraints="NO" id="GrS-kd-lx2">
                                         <rect key="frame" x="0.0" y="0.0" width="139" height="139"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GrS-kd-lx2" secondAttribute="height" multiplier="1:1" id="HER-uL-WWg"/>
@@ -117,4 +117,7 @@
             <point key="canvasLocation" x="138.75" y="132.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hangman0" width="104" height="105"/>
+    </resources>
 </document>
