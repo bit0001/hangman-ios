@@ -40,10 +40,30 @@ class HangmanViewController: UIViewController {
     }
     
     @IBAction func guess() {
+        if let letter = guessTextField.text {
+            guard letter.characters.count == 1 else {
+                guessTextField.text = ""
+                return
+            }
+            game.guessLetter(letter: Character(letter))
+            updateUI()
+        }
+        guessTextField.text = ""
+    }
+    
+    private func updateUI() {
+        wordLabel.text = game.guessedWord
+        guessedLettersLabel.text = "You have guessed: " + String(game.guessedLetters)
+        guessesLeftLabel.text = "(\(game.tries) guesses remaining)"
+        hangmanImage.image = images[game.tries]
+        guessTextField.text = ""
     }
     
     @IBAction func newWord() {
-    }    
+        game = HangmanGame(word: getRandomWord(), tries: NumberOfTries)
+        updateUI()
+    }
+    
     private func getRandomWord() -> String {
         return words[Int(arc4random_uniform(UInt32(words.count)))]
     }
