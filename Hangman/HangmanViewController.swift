@@ -15,6 +15,7 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var guessedLettersLabel: UILabel!
     @IBOutlet weak var guessesLeftLabel: UILabel!
     
+    let NumberOfTries = 10
     var game: HangmanGame!
     var words = readWords() ?? ["hangman"]
     
