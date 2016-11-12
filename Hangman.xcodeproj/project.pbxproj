@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE85462E1DD55FEA00992713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85462D1DD55FEA00992713 /* AppDelegate.swift */; };
-		CE8546301DD55FEA00992713 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85462F1DD55FEA00992713 /* ViewController.swift */; };
+		CE8546301DD55FEA00992713 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85462F1DD55FEA00992713 /* HangmanViewController.swift */; };
 		CE8546331DD55FEA00992713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8546311DD55FEA00992713 /* Main.storyboard */; };
 		CE8546351DD55FEA00992713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8546341DD55FEA00992713 /* Assets.xcassets */; };
 		CE8546381DD55FEA00992713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8546361DD55FEA00992713 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		CE85462A1DD55FEA00992713 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE85462D1DD55FEA00992713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE85462F1DD55FEA00992713 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE85462F1DD55FEA00992713 /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
 		CE8546321DD55FEA00992713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE8546341DD55FEA00992713 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8546371DD55FEA00992713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		CE85462C1DD55FEA00992713 /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
-				CE85462F1DD55FEA00992713 /* ViewController.swift */,
+				CE85462F1DD55FEA00992713 /* HangmanViewController.swift */,
 				CE8546311DD55FEA00992713 /* Main.storyboard */,
 				CE8546341DD55FEA00992713 /* Assets.xcassets */,
 				CEDF052D1DD654BA00E133B7 /* Model */,
@@ -278,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8546301DD55FEA00992713 /* ViewController.swift in Sources */,
+				CE8546301DD55FEA00992713 /* HangmanViewController.swift in Sources */,
 				CEDF052C1DD654B000E133B7 /* HangmanGame.swift in Sources */,
 				CE85462E1DD55FEA00992713 /* AppDelegate.swift in Sources */,
 			);

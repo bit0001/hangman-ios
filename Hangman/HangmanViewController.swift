@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HangmanViewController: UIViewController {
     @IBOutlet weak var hangmanImage: UIImageView!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
