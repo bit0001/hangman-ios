@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE21A0661DD6A797005C4768 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE21A0651DD6A797005C4768 /* words.txt */; };
 		CE85462E1DD55FEA00992713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85462D1DD55FEA00992713 /* AppDelegate.swift */; };
 		CE8546301DD55FEA00992713 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85462F1DD55FEA00992713 /* HangmanViewController.swift */; };
 		CE8546331DD55FEA00992713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8546311DD55FEA00992713 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE21A0651DD6A797005C4768 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		CE85462A1DD55FEA00992713 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE85462D1DD55FEA00992713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE85462F1DD55FEA00992713 /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE21A0641DD6A778005C4768 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE21A0651DD6A797005C4768 /* words.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		CE8546211DD55FEA00992713 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 				CE8546311DD55FEA00992713 /* Main.storyboard */,
 				CE8546341DD55FEA00992713 /* Assets.xcassets */,
 				CEDF052D1DD654BA00E133B7 /* Model */,
+				CE21A0641DD6A778005C4768 /* Resources */,
 				CE85465B1DD5790400992713 /* Supporting Files */,
 			);
 			path = Hangman;
@@ -253,6 +264,7 @@
 			files = (
 				CE8546381DD55FEA00992713 /* LaunchScreen.storyboard in Resources */,
 				CE8546351DD55FEA00992713 /* Assets.xcassets in Resources */,
+				CE21A0661DD6A797005C4768 /* words.txt in Resources */,
 				CE8546331DD55FEA00992713 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
