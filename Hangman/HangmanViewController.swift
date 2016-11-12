@@ -15,6 +15,9 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var guessedLettersLabel: UILabel!
     @IBOutlet weak var guessesLeftLabel: UILabel!
     
+    var game: HangmanGame!
+    var words = readWords() ?? ["hangman"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
