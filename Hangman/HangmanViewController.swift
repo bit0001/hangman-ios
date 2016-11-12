@@ -35,6 +35,8 @@ class HangmanViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        game = HangmanGame(word: getRandomWord(), tries: NumberOfTries)
+        wordLabel.text = game.guessedWord
     }
     
     @IBAction func guess() {
