@@ -40,8 +40,9 @@ class HangmanGame {
 }
 
 func readWords() -> [String]? {
-    if let path = Bundle.main.path(forResource: "words", ofType: "txt") {
-        return try? String(contentsOfFile: path).components(separatedBy: "\n").filter{ $0 != "" }
+    guard let path = Bundle.main.path(forResource: "words", ofType: "txt") else {
+        return nil
     }
-    return nil
+
+    return try? String(contentsOfFile: path).components(separatedBy: "\n").filter{ $0 != "" }
 }
