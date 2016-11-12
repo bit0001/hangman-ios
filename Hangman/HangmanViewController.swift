@@ -12,6 +12,8 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var hangmanImage: UIImageView!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
+    @IBOutlet weak var guessedLettersLabel: UILabel!
+    @IBOutlet weak var guessesLeftLabel: UILabel!
     
 
     override func viewDidLoad() {
