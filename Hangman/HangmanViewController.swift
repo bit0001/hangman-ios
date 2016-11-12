@@ -44,6 +44,9 @@ class HangmanViewController: UIViewController {
     
     @IBAction func newWord() {
     }    
+    private func getRandomWord() -> String {
+        return words[Int(arc4random_uniform(UInt32(words.count)))]
+    }
 
 }
 
