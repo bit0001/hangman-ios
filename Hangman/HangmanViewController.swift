@@ -14,6 +14,7 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var guessTextField: UITextField!
     @IBOutlet weak var guessedLettersLabel: UILabel!
     @IBOutlet weak var guessesLeftLabel: UILabel!
+    @IBOutlet weak var feedbackLabel: UILabel!
     
     let NumberOfTries = 10
     var game: HangmanGame!
@@ -52,6 +53,13 @@ class HangmanViewController: UIViewController {
     }
     
     private func updateUI() {
+        if game.isOver {
+            feedbackLabel.isHidden = false
+            feedbackLabel.text = game.isWon ? "You Win!" : "You Lose!"
+        } else {
+            feedbackLabel.isHidden = true
+        }
+
         wordLabel.text = game.guessedWord
         guessedLettersLabel.text = "You have guessed: " + String(game.guessedLetters)
         guessesLeftLabel.text = "(\(game.tries) guesses remaining)"
